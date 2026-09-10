@@ -30,6 +30,15 @@ docker run --rm -p 5000:5000 mlops-cd-demo:local
 pytest tests/ -v
 ```
 
+## Verified Working
+
+Tested locally on Windows with Docker Desktop. Pulled both versions from GHCR:
+
+- `ghcr.io/salarshoaib/mlops-cd-demo:1.0.0` — returns `model_version: 1.0`
+- `ghcr.io/salarshoaib/mlops-cd-demo:1.1.0` — returns `model_version: 1.1`
+
+Rollback works: swap `:1.1.0` for `:1.0.0` and the older model version is restored instantly.
+
 ## CD Pipeline
 
 Tag a version to trigger the pipeline:
